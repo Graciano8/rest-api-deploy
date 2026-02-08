@@ -1,0 +1,35 @@
+###Recuperar todas las peliculas
+GET http://localhost:3000/movies
+
+###Recuperar una pelicula por id
+GET http://localhost:3000/movies/241bf55d-b649-4109-af7c-0e6890ded3fc
+
+###Recuperar una pelicula por genero
+GET http://localhost:3000/movies?genre=Drama
+
+### paginacion ? 
+
+### crear una pelicula
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "El señor de los anillos",
+    "genre": ["Drama", "Action"],
+    "year": 2001,
+    "director": "allan martin",
+    "duration": 175,
+    "rate": 5,
+    "poster": "https://imgs.search.brave.com/ZZ3PjCMIbVkGV3iASWr1hlpa2oYCeXBD1Qe0W0p3aHM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzM2LzRm/Lzk4LzM2NGY5ODQy/NmM0NDBiZjVlZTAy/OWVhODZmZDU0ZDE1/LmpwZw"
+}
+
+### actualizar una pelicula
+PATCH  http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year": 1998
+}
+
+
+### eliminar una pelicula
